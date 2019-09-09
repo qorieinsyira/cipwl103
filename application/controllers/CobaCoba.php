@@ -43,9 +43,9 @@ class CobaCoba extends CI_Controller {
                 echo "$NA | Nilai Anda $nilaiHuruf";
             }           
 
-            if ($uts == 0 || $uas == 0) {
-                $nilaiHuruf = "E";
-                echo $nilaiHuruf;
-            }
+            // if ($uts == 0 || $uas == 0) {
+            //     $nilaiHuruf = "E";
+            //     echo $nilaiHuruf;
+            // }
     }
 }
