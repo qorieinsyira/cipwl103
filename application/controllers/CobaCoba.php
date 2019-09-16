@@ -20,28 +20,38 @@ class CobaCoba extends CI_Controller {
 
         $NA = $tugas*0.3 + $uts*0.3 + $uas*0.4;
 
+        if($tugas == 0 && $uts == 0 && $uas == 0){
+            $nilaiHuruf = "E";
+            echo "$NA | Nilai Anda $nilaiHuruf";
+        } 
+        elseif ($uts == 0 || $uas == 0){
+            $nilaiHuruf = "D";
+            echo "$NA | Nilai Anda $nilaiHuruf";
+        }
+        else{
             if ($NA >= 80) {
                 $nilaiHuruf = "A";
                 echo "$NA | Nilai Anda $nilaiHuruf";
-            } else if ($NA >= 75 && $NA < 80) {
+            } elseif ($NA >= 75 && $NA < 80) {
                 $nilaiHuruf = "B+";
                 echo "$NA | Nilai Anda $nilaiHuruf";
-            } else if ($NA >= 70 && $NA < 75) {
+            } elseif ($NA >= 70 && $NA < 75) {
                 $nilaiHuruf = "B";
                 echo "$NA | Nilai Anda $nilaiHuruf";
-            } else if ($NA >= 65 && $NA < 70) {
+            } elseif ($NA >= 65 && $NA < 70) {
                 $nilaiHuruf = "C+";
                 echo "$NA | Nilai Anda $nilaiHuruf";
-            } else if ($NA >= 60 && $NA < 65) {
+            } elseif ($NA >= 60 && $NA < 65) {
                 $nilaiHuruf = "C";
                 echo "$NA | Nilai Anda $nilaiHuruf";
-            } else if ($NA >= 56 && $NA < 60) {
+            } elseif ($NA >= 56 && $NA < 60) {
                 $nilaiHuruf = "D";
                 echo "$NA | Nilai Anda $nilaiHuruf";
-            } else if ($NA <56) {
+            } else {
                 $nilaiHuruf = "E";
                 echo "$NA | Nilai Anda $nilaiHuruf";
-            }           
+            }  
+        }         
 
             // if ($uts == 0 || $uas == 0) {
             //     $nilaiHuruf = "E";
